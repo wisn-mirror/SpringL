@@ -14,7 +14,12 @@ public class MyInterceptor1 implements HandlerInterceptor {
 
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         System.out.println("preHandle");
-
+        Integer aab = Integer.valueOf(request.getParameter("aab"));
+        String ccb = request.getParameter("ccb");
+        System.out.println("aab:"+aab+" ccb"+ccb);
+        if(aab==22){
+            return true;
+        }
         return false;
     }
 
